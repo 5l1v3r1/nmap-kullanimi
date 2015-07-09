@@ -1,0 +1,33 @@
+Nmap Tarama Komutları
+
+Bsit Tarama
+nmap google.com
+
+Ping Tara
+nmap -sn google.com
+
+Hızlı Tarama
+nmap -T4 -F google.com
+
+Traceroute ile hızlı tarama
+nmap -sn --traceroute google.com
+
+Hızlı Tarama plus
+nmap -sV -T4 -O -F --version-light google.com
+
+Derin Tarama 
+nmap -T4 -A -v google.com
+
+Derin Tarama+UDp
+nmap -sS -sU -T4 -A -v google.com
+
+Yoğun tarama, tüm TCP portları
+nmap -p 1-65535 -T4 -A -v google.com
+
+Yoğun tarama, ping göndermeden
+nmap -T4 -A -v -Pn google.com
+
+Derin kapsamlı tarama(yavaş)
+nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" google.com
+
+
