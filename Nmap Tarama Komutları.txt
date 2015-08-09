@@ -33,4 +33,13 @@ nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "de
 Tüm Portların Teker Teker Taranması İçin 
 nmap google.com -p-
 
+Taranan Portlarda çalışan servisler ve servislerin versiyon bilgilerini bulma(hepsinin bulunmayabilir firewallar engeller) 
+
+nmap google.com -p- -sV
+
+İşletim sistemini bulma 
+
+nmap google.com -O -n
+
+
 
